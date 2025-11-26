@@ -1,0 +1,7 @@
+﻿services:
+  3garfos.webapi:
+    image: 3garfos.webapi
+    build:
+      context: .
+      dockerfile: 3Garfos.WebApi/Dockerfile
+
