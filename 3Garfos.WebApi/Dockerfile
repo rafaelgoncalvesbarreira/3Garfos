@@ -7,8 +7,8 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["3Garfos.WebApi/3Garfos.WebApi.csproj", "3Garfos.WebApi/"]
-RUN dotnet restore "3Garfos.WebApi/3Garfos.WebApi.csproj"
+COPY ["src/3Garfos.WebApi/3Garfos.WebApi.csproj", "3Garfos.WebApi/"]
+RUN dotnet restore "src/3Garfos.WebApi/3Garfos.WebApi.csproj"
 COPY . .
 WORKDIR "/src/3Garfos.WebApi"
 RUN dotnet build "./3Garfos.WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/build

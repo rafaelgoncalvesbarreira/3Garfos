@@ -3,5 +3,5 @@
     image: 3garfos.webapi
     build:
       context: .
-      dockerfile: 3Garfos.WebApi/Dockerfile
+      dockerfile: src/3Garfos.WebApi/Dockerfile
 
