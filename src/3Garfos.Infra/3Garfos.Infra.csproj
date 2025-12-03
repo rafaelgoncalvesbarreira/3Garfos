@@ -6,5 +6,10 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
+    <ItemGroup>
+        <InternalsVisibleTo Include="3Garfos.TUnit"  />
+        <InternalsVisibleTo Include="3Garfos.xUnit"  />
+    </ItemGroup>
+
 
 </Project>
