@@ -3,6 +3,7 @@
     <Project Path="src\3Garfos.Benchmarks\3Garfos.Benchmarks.csproj" Type="Classic C#" />
     <Project Path="src\3Garfos.Console\3Garfos.Console.csproj" Type="Classic C#" />
     <Project Path="src\3Garfos.Core\3Garfos.Core.csproj" Type="Classic C#" />
+    <Project Path="src\3Garfos.Infra\3Garfos.Infra.csproj" Type="Classic C#" />
     <Project Path="src\3Garfos.SourceGenerator\3Garfos.SourceGenerator.csproj" Type="Classic C#" />
     <Project Path="src\3Garfos.WebApi\3Garfos.WebApi.csproj" Type="Classic C#" />
   </Folder>
