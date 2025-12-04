@@ -1,6 +1,6 @@
-@_3Garfos.WebApi_HostAddress = http://localhost:5066
+@WebApi_HostAddress = http://localhost:5066
 
-GET {{_3Garfos.WebApi_HostAddress}}/weatherforecast/
+GET {{WebApi_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
