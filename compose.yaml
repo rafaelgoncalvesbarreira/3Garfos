@@ -1,7 +1,22 @@
-﻿services:
-  3garfos.webapi:
-    image: 3garfos.webapi
+﻿name: 3Garfos
+
+services:
+  webapi:
     build:
       context: .
       dockerfile: src/3Garfos.WebApi/Dockerfile
-
+    ports:
+      - 8080:8080
+      - 8081:8081
+  postegres:
+    image: postgres
+    restart: always
+    shm_size: 128mb 
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: 123456
+    volumes:
+      - postgres-db:/var/lib/postgresql
+volumes:
+  postgres-db:

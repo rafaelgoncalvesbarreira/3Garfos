@@ -8,8 +8,8 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["src/3Garfos.WebApi/3Garfos.WebApi.csproj", "3Garfos.WebApi/"]
-RUN dotnet restore "src/3Garfos.WebApi/3Garfos.WebApi.csproj"
-COPY . .
+RUN dotnet restore "3Garfos.WebApi/3Garfos.WebApi.csproj"
+COPY src/3Garfos.WebApi/. 3Garfos.WebApi/.
 WORKDIR "/src/3Garfos.WebApi"
 RUN dotnet build "./3Garfos.WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
@@ -20,4 +20,4 @@ RUN dotnet publish "./3Garfos.WebApi.csproj" -c $BUILD_CONFIGURATION -o /app/pub
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "3Garfos.webapi.dll"]
+ENTRYPOINT ["dotnet", "3Garfos.WebApi.dll"]
